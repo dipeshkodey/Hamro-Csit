@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hamro_csit_app/article_screen.dart';
 import 'package:hamro_csit_app/home_screen.dart';
 import 'package:hamro_csit_app/online_compilers.dart';
+import 'package:hamro_csit_app/plus_screen.dart';
+import 'package:hamro_csit_app/profile_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -17,9 +19,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
     HomeScreen(),
     OnlineCompilers(),
     
-    Center(child: Text("Hello 3rd Screen")),
+    PlusScreen(),
     ArticleScreen(),
-    Center(child: Text("Hello 5th Screen")),
+    ProfileScreen()
   ];
 
 

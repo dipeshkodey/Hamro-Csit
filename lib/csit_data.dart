@@ -237,3 +237,117 @@ List<Map> articles=[
     "subtitle": "Looking at global and Nepali trends, which IT course sets you up best for success?"
   }
 ];
+
+
+
+List<Map> profile =[
+  {
+    'text':"Tell your Friend",
+    'image':Icons.share,
+  },
+  {
+    'text':"Rate Application",
+    'image':Icons.share,
+  },
+
+  {
+    'text':"View Profile",
+    'image':Icons.share,
+  },
+
+
+  {
+    'text':"Edit Profile",
+    'image':Icons.person,
+  },
+
+
+  {
+    'text':"Switch Platform",
+    'image':Icons.share,
+  },
+
+
+  {
+    'text':"About us",
+    'image':Icons.share,
+  },
+
+
+  {
+    'text':"Support",
+    'image':Icons.support,
+  },
+
+  {
+    'text':"Privacy Policy",
+    'image':Icons.private_connectivity,
+  },
+
+  {
+    'text':"Logout Account",
+    'image':Icons.remove,
+  },
+];
+
+
+List<Map> colors=[
+
+  {
+    'color':Color(0xff008A73)
+  },
+  {
+    'color':Color(0xff7102BB)
+  },
+  {
+    'color':Color(0xffF44336)
+  },
+  {
+    'color':Color(0xffE91E63)
+  },
+  {
+    'color':Color(0xff9C27B0)
+  },
+  {
+    'color':Color(0xff673AB7)
+  },
+
+  {
+    'color':Color(0xff2196F3)
+  },
+  {
+    'color':Color(0xff03A9F4)
+  },
+  {
+    'color':Color(0xff00BCD4)
+  },
+  {
+    'color':Color(0xff009688)
+  },
+  {
+    'color':Color(0xff4CAF50)
+  },
+  {
+    'color':Color(0xff8BC34A)
+  },
+
+
+  {
+    'color':Color(0xff3F51B5)
+  },
+  {
+    'color':Color(0xff607D8B)
+  },
+  {
+    'color':Color(0xffFFC107)
+  },
+  {
+    'color':Color(0xffFF9800)
+  },
+  {
+    'color':Color(0xffFF5722)
+  },
+  {
+    'color':Color(0xff795548)
+  },
+];
