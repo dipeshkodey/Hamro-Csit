@@ -240,55 +240,55 @@ List<Map> articles=[
 
 
 
-List<Map> profile =[
-  {
-    'text':"Tell your Friend",
-    'image':Icons.share,
-  },
-  {
-    'text':"Rate Application",
-    'image':Icons.share,
-  },
+// List<Map> profile =[
+//   {
+//     'text':"Tell your Friend",
+//     'image':Icons.share,
+//   },
+//   {
+//     'text':"Rate Application",
+//     'image':Icons.share,
+//   },
 
-  {
-    'text':"View Profile",
-    'image':Icons.share,
-  },
-
-
-  {
-    'text':"Edit Profile",
-    'image':Icons.person,
-  },
+//   {
+//     'text':"View Profile",
+//     'image':Icons.share,
+//   },
 
 
-  {
-    'text':"Switch Platform",
-    'image':Icons.share,
-  },
+//   {
+//     'text':"Edit Profile",
+//     'image':Icons.person,
+//   },
 
 
-  {
-    'text':"About us",
-    'image':Icons.share,
-  },
+//   {
+//     'text':"Switch Platform",
+//     'image':Icons.share,
+//   },
 
 
-  {
-    'text':"Support",
-    'image':Icons.support,
-  },
+//   {
+//     'text':"About us",
+//     'image':Icons.share,
+//   },
 
-  {
-    'text':"Privacy Policy",
-    'image':Icons.private_connectivity,
-  },
 
-  {
-    'text':"Logout Account",
-    'image':Icons.remove,
-  },
-];
+//   {
+//     'text':"Support",
+//     'image':Icons.support,
+//   },
+
+//   {
+//     'text':"Privacy Policy",
+//     'image':Icons.private_connectivity,
+//   },
+
+//   {
+//     'text':"Logout Account",
+//     'image':Icons.remove,
+//   },
+// ];
 
 
 List<Map> colors=[
@@ -349,5 +349,68 @@ List<Map> colors=[
   },
   {
     'color':Color(0xff795548)
+  },
+];
+
+
+
+
+List<Map> semester =[
+
+  {
+    'name':"First Semester"
+  },
+
+  {
+    'name':"Second Semester"
+  },
+
+  {
+    'name':"Third Semester"
+  },
+
+  {
+    'name':"Fourth Semester"
+  },
+
+  {
+    'name':"Fifth Semester"
+  },
+
+  {
+    'name':"Sixth Semester"
+  },
+
+  {
+    'name':"Seventh Semester"
+  },
+
+  {
+    'name':"Eight Semester"
+  },
+
+  
+];
+
+List <Map> pdfs =[
+
+  {
+    'path':"assets/pdfs/Chapter1.pdf"
+  },
+
+  {
+    'path':"assets/pdfs/Chapter1.pdf"
+  },
+
+  {
+    'path':"assets/pdfs/Chapter1.pdf"
+  },
+
+  {
+    'path':"assets/pdfs/Chapter1.pdf"
+  },
+
+  {
+    'path':"assets/pdfs/Chapter1.pdf"
   },
 ];

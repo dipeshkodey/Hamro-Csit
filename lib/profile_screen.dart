@@ -1,12 +1,23 @@
 
 
+
+
 import 'package:flutter/material.dart';
 import 'package:hamro_csit_app/csit_data.dart';
+import 'package:hamro_csit_app/pdf_viewer_screen.dart';
 
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
+  @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  bool _istoggled = false;
+  bool _istoggled1 = false;
+  bool _istoggled2 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -287,7 +298,60 @@ class ProfileScreen extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(right: 20),
-                            child: Icon(Icons.arrow_drop_down, size: 30),
+                            child: InkWell(
+                              onTap: (){
+                                showModalBottomSheet(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.zero
+                                  ),
+                                  context: context, builder: (context){
+                                  return SizedBox(
+                                    height: 420,
+                                    width: double.maxFinite,
+                                    
+                                    child: Column(
+                                      children: [
+                                        SizedBox(height: 10,),
+                                        Text("Choose Option",style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w600),),
+
+                                        Expanded(
+                                          child: ListView.builder(
+
+                                            itemCount: semester.length,
+                                            itemBuilder: (context,index){
+                                            return Padding(
+                                              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                                              child: InkWell(
+                                                onTap: (){
+                                                  Navigator.push(context,
+                                                  MaterialPageRoute(builder: (_)=>PdfViewerScreen(pdfs: pdfs[index]['path'])));
+                                                },
+                                                child: Row(
+                                                  children: [
+                                                    Icon(Icons.arrow_right_sharp,size: 30,),
+                                                    SizedBox(width: 7,),
+                                                    Text(semester[index]['name'],style: TextStyle(color: Colors.black,fontSize: 17,fontWeight: FontWeight.w400),),
+                                                    
+                                                                                       
+                                                                                          
+                                                                                          
+                                                  ],
+                                                ),
+                                              ),
+                                            );
+                                          
+                                          
+                                          }),
+                                        )
+
+                                      ],
+                                    ),
+                                  );
+
+                                },);
+                              },
+                              
+                              child: Icon(Icons.arrow_drop_down, size: 30)),
                           ),
                         ],
                       ),
@@ -331,10 +395,22 @@ class ProfileScreen extends StatelessWidget {
                                 height: 1,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 20),
-                              child: Icon(Icons.toggle_off, size: 40),
-                            ),
+                            // Padding(
+                            //   padding: const EdgeInsets.only(right: 20),
+                            //   child: Icon(Icons.toggle_off, size: 40),
+                            // ),
+
+                            Transform.scale(
+                              scale: 0.7,
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 20),
+                                child: Switch(value: _istoggled1, onChanged: (value){
+                                  setState(() {
+                                    _istoggled1 = value;
+                                  });
+                                }),
+                              ),
+                            )
                           ],
                         ),
                       ),
@@ -378,10 +454,22 @@ class ProfileScreen extends StatelessWidget {
                                 height: 1,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 20),
-                              child: Icon(Icons.toggle_off, size: 40),
-                            ),
+                            // Padding(
+                            //   padding: const EdgeInsets.only(right: 20),
+                            //   child: Icon(Icons.toggle_off, size: 40),
+                            // ),
+                            Transform.scale(
+                              scale: 0.7,
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 20),
+                                child: Switch(value: _istoggled, onChanged:(value){
+                                  setState(() {
+                                    
+                                    _istoggled = value;
+                                  });
+                                }),
+                              ),
+                            )
                           ],
                         ),
                       ),
@@ -462,7 +550,7 @@ class ProfileScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 30, right: 15, left: 15),
               child: Container(
-                height: 125,
+                height: 135,
                 width: double.maxFinite,
                 color: Colors.white,
                 child: Padding(
@@ -493,10 +581,21 @@ class ProfileScreen extends StatelessWidget {
                                 height: 1,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 20),
-                              child: Icon(Icons.toggle_off, size: 40),
-                            ),
+                            // Padding(
+                            //   padding: const EdgeInsets.only(right: 20),
+                            //   child: Icon(Icons.toggle_off, size: 40),
+                            // ),
+                            Transform.scale(
+                              scale: 0.7,
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 20),
+                                child: Switch(value: _istoggled2, onChanged: (value){
+                                  setState(() {
+                                    _istoggled2 = value;
+                                  });
+                                }),
+                              ),
+                            )
                           ],
                         ),
                       ),
