@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hamro_csit_app/csit_data.dart';
+import 'package:hamro_csit_app/data/semester_data.dart';
+import 'package:hamro_csit_app/semester/subjects_display_screens.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -140,39 +142,53 @@ class HomeScreen extends StatelessWidget {
                     crossAxisSpacing: 10,
                   ),
 
-                  itemCount: grid.length,
+                  itemCount: semesterData.length,
                   itemBuilder: (context, index) {
-                    return Container(
-                      color: Color(0xff008D7F).withOpacity(0.15),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            grid[index]['icon'],
-                            height: 30,
-                            width: 30,
-                            color: Color(0xff008D7F),
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder:
+                                (_) => SubjectsDisplayScreens(
+                                  subjects: semesterData[index].subjects,
+                                  title: semesterData[index].semester,
+                                ),
                           ),
+                        );
+                      },
+                      child: Container(
+                        color: Color(0xff008D7F).withOpacity(0.15),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              semesterData[index].image,
+                              height: 30,
+                              width: 30,
+                              color: Color(0xff008D7F),
+                            ),
 
-                          Text(
-                            grid[index]['text'],
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w400,
-                              height: 1,
+                            Text(
+                              semesterData[index].semester,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400,
+                                height: 1,
+                              ),
                             ),
-                          ),
-                          Text(
-                            "Semester",
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 10,
-                              fontWeight: FontWeight.w200,
-                              height: 1,
+                            Text(
+                              "Semester",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w200,
+                                height: 1,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     );
                   },

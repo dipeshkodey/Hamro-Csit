@@ -238,59 +238,6 @@ List<Map> articles=[
   }
 ];
 
-
-
-// List<Map> profile =[
-//   {
-//     'text':"Tell your Friend",
-//     'image':Icons.share,
-//   },
-//   {
-//     'text':"Rate Application",
-//     'image':Icons.share,
-//   },
-
-//   {
-//     'text':"View Profile",
-//     'image':Icons.share,
-//   },
-
-
-//   {
-//     'text':"Edit Profile",
-//     'image':Icons.person,
-//   },
-
-
-//   {
-//     'text':"Switch Platform",
-//     'image':Icons.share,
-//   },
-
-
-//   {
-//     'text':"About us",
-//     'image':Icons.share,
-//   },
-
-
-//   {
-//     'text':"Support",
-//     'image':Icons.support,
-//   },
-
-//   {
-//     'text':"Privacy Policy",
-//     'image':Icons.private_connectivity,
-//   },
-
-//   {
-//     'text':"Logout Account",
-//     'image':Icons.remove,
-//   },
-// ];
-
-
 List<Map> colors=[
 
   {

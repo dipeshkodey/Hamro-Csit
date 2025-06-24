@@ -14,3 +14,8 @@ class PdfViewerScreen extends StatelessWidget {
     );
   }
 }
+
+
+
+
+//  Chapter(title: "", pdfs: "assets/pdfs/Chapter1.pdf"),
